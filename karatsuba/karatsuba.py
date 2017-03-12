@@ -1,7 +1,7 @@
 def carrot(x, y):
 	#   Test for base case
 	#   Get length of X and Y. If > 2, not base case
-
+	print('x',x,'y',y)
 	len_x = len(str(x))
 
 	n = len_x  # TODO generalise this to unequal n
@@ -13,10 +13,10 @@ def carrot(x, y):
 	# Find index of middle of number
 	divisor = (10 ** (n / 2))
 
-	a = x / divisor
-	b = x % divisor
-	c = y / divisor
-	d = y % divisor
+	a = int(x / divisor)
+	b = int(x % divisor)
+	c = int(y / divisor)
+	d = int(y % divisor)
 
 	t1 = a * c if base_case else carrot(a, c)
 	t2 = b * d if base_case else carrot(b, d)

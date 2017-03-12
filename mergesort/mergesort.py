@@ -4,7 +4,7 @@ def sort(set):
         if len(set)<2 :
                 return set
         else:
-                pivot = (len(set)/2)
+                pivot = int(len(set)/2)
                 list1=sort(set[0:pivot])
                 list2=sort(set[pivot:len(set)])
                 return merge(list1, list2)

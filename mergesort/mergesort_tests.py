@@ -1,5 +1,5 @@
 import unittest
-import mergesort as sort
+import mergesort.mergesort as sort
 
 
 class MergeSortTests(unittest.TestCase):
