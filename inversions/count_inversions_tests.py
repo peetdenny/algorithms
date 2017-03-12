@@ -1,5 +1,5 @@
 import unittest
-import inversions as inv
+import inversions.inversions as inv
 
 
 class CountInversionsTests(unittest.TestCase):
