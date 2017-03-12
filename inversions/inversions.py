@@ -30,8 +30,9 @@ def count_inversions(a):
 def count_n_merge_split_inversions(l, r):
 	# this is the same as the merge from mergesort, but performs a count as it merges
 	lidx = ridx = 0
-	output_array = [len(l) + len(r)]
+	output_array = []
 	split_count = 0
+
 	while lidx < len(l):
 		if l[lidx] < r[ridx]:
 			output_array.append(l[lidx])
@@ -42,7 +43,10 @@ def count_n_merge_split_inversions(l, r):
 
 		else:
 			output_array.append(r[ridx])
-			ridx += 1
 			split_count += len(l) - lidx
-			print('split count', split_count)
+			ridx += 1
+			if ridx >= len(r):
+				# nothing left to copy from r
+				output_array.extend(l[lidx:])
+				return output_array, split_count
 	return output_array, split_count

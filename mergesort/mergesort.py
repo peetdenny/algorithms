@@ -9,9 +9,10 @@ def sort(set):
                 list2=sort(set[pivot:len(set)])
                 return merge(list1, list2)
 
+
 def merge(list1, list2):
         merged=[]
-        #Compare 1 from left with successive from right until L wins, then pop L and proceed with 2 from L
+#       Compare 1 from left with successive from right until L wins, then pop L and proceed with 2 from L
         l_idx=0
         r_idx=0
         while(l_idx<len(list1) and r_idx<len(list2)):
