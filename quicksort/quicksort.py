@@ -26,7 +26,7 @@ def sort(A, left, right):
 	if len(A) < 3:
 		return A
 
-	sort(A, 0, i-2)
+	sort(A, left, i-2)
 	sort(A, i, right)
 
 	return A
