@@ -1,11 +1,17 @@
+import random
+comps = 0
+
+
 def swap_dems(A, a, b):
 	temp = A[a]
 	A[a] = A[b]
 	A[b] = temp
 
 
-def choosePivot(A, p, right):
-	return p
+def choose_pivot(A, left, right):
+	pivot = random.randrange(left, right)
+	swap_dems(A, left, pivot)
+	return left
 
 
 def sort(A, left, right):
@@ -13,7 +19,10 @@ def sort(A, left, right):
 		return A
 	if left >= right:
 		return A
-	pivot = choosePivot(A, left, right)
+	global comps
+	comps += (right - left)
+	pivot = choose_pivot(A, left, right)
+
 	i = left + 1
 
 	for j in range(i, right +1):
