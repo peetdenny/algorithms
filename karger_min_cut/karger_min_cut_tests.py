@@ -2,7 +2,7 @@ import unittest
 import karger_min_cut.karger_min_cut as karger
 
 graph = {}
-test = {'file': './test-graph.txt', 'nodes': 4.0}
+test = {'file': './karger_min_cut/test-graph.txt', 'nodes': 4.0}
 
 
 class KargerTests(unittest.TestCase):
