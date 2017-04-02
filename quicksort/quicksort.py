@@ -9,7 +9,7 @@ def swap_dems(A, a, b):
 
 
 def choose_pivot(A, left, right):
-	pivot = random.randrange(left, right)
+	pivot = random.randint(left, right)
 	swap_dems(A, left, pivot)
 	return left
 
